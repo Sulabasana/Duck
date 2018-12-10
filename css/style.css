@@ -40,8 +40,38 @@ input:checked + label{
 	transform-origin: 60%;
 	z-index: -5;
 }
-.duck:nth-last-pf-type(1){
+.duck:nth-last-of-type(1){
 	animation: duckfly 10s linear 1s infinite;
+	animation-direction: alternate;
+	cursor: url(../img/aim.png), text;
+}
+.duck:nth-last-of-type(2){
+	animation: duckfly 20s linear 2s infinite;
+	animation-direction: alternate;
+	cursor: url(../img/aim.png), text;
+}
+.duck:nth-last-of-type(3){
+	animation: duckfly 25s linear 3s infinite;
+	animation-direction: alternate;
+	cursor: url(../img/aim.png), text;
+}
+.duck:nth-last-of-type(4){
+	animation: duckfly 40s linear 4s infinite;
+	animation-direction: alternate;
+	cursor: url(../img/aim.png), text;
+}
+.duck:nth-last-of-type(5){
+	animation: duckfly 50s linear 6s infinite;
+	animation-direction: alternate;
+	cursor: url(../img/aim.png), text;
+}
+.duck:nth-last-of-type(6){
+	animation: duckfly 60s linear 7s infinite;
+	animation-direction: alternate;
+	cursor: url(../img/aim.png), text;
+}
+.duck:nth-last-of-type(5){
+	animation: duckfly 80s linear 9s infinite;
 	animation-direction: alternate;
 	cursor: url(../img/aim.png), text;
 }
@@ -55,6 +85,30 @@ input:checked + label{
 	z-index: 2;
 	background-color: #dadada;
 }
-score:after{
-	
+.score:after{
+	content: counter(score);
+	display: inline-block;
+}
+.score:before{
+	content: "Score: ";
+	display: inline-block;
+	margin-right: 10px;
+}
+input:checked{
+	counter-increment: score;
+}
+body{
+	margin: 0;
+	padding: 0;
+	cursor: url(../img/aim.png), text;
+	overflow:hidden;
+}
+body:before{
+	content: "";
+	display: block;
+	position: fixed;
+	width: 1000%;
+	height: 100%;
+	z-index: 1;
+	background: url(../img/bg.png) repeat-x bottom left;
 }
